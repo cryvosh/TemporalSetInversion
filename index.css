@@ -1,0 +1,67 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	max-width: 880px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 50px;
+	font-family: "Linux Libertine O";
+}
+
+h1 {
+	font-size: 41px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+}
+
+h2 {
+	font-size: 30px;
+	padding-top: 17px;
+	padding-bottom: 17px;;
+}
+
+h3 {
+	font-size: 21px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+pre {
+	font-size: 15px;
+	background-color: rgb(240, 240, 240);
+	padding-left: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+p {
+	font-size: 19.5px;
+}
+
+a {
+	color: purple;
+}
+
+footer {
+	padding: 50px;
+}
+
+i {
+	padding-top: 15px;
+	padding-bottom: 10px;
+	padding-right: 12px;
+}
+
+.icon {
+	text-decoration: none;
+}
+
+#sup_video {
+	height: 550px;
+	width: 880px;
+}
