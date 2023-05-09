@@ -6,6 +6,14 @@
 		<link rel="stylesheet" href="index.css">
 		<link href="https://fonts.cdnfonts.com/css/linux-libertine-o" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script type="text/javascript"
+  			src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			});
+		</script>
 	</head>
 	<body>
 		<div class="content">
@@ -13,13 +21,23 @@
 			<h3>ACM Transactions on Graphics (SIGGRAPH 2023)</h3>
 			<h3><a href="https://www.linkedin.com/in/kavosh-jazar/">Kavosh Jazar</a>, <a href="https://www.cs.mcgill.ca/~kry/">Paul G. Kry</a></h3>
 			<h3>McGill University</h3>
-			<a class="icon" href="https://github.com/cryvosh/TemporalSetInversion">
-				<i class="fa fa-github" style="font-size:40px;"></i>
-			</a>
-			<a class="icon" href="Temporal_Set_Inversion.pdf">
-				<i class="fa fa-file-pdf-o" style="font-size:40px;"></i>
-			</a>
+			<p>
+				<a class="icon" href="https://github.com/cryvosh/TemporalSetInversion">
+					<i class="fa fa-github" style="font-size:30px;"></i> Source code (github)
+				</a>
+				<br>
+				<a class="icon" href="Temporal_Set_Inversion.pdf">
+					<i class="fa fa-file-pdf-o" style="font-size:30px;"></i> Paper pdf (37 mb)
+				</a>
+			</p>
 			<!-- <i class="fa fa-link" style="font-size:27px;"></i> -->
+			<img src="1.jpg">
+			<img src="2.jpg">
+			<img src="3.jpg">
+			<img src="4.jpg">
+			<p align="justify">
+				Fig 1. Snapshots of an animated implicit surface at timesteps $68, 150, 265$ and $330$ showing in red the regions that were evaluated in each timestep to sparsely update a $1024^3$ voxelization of the scene only as and where is necessary to maintain bounded error in the surface. For comparison, existing approaches would color the entire surface red in each timestep, thus wasting resources in static or slowly-evolving areas far from the motion. The runtime of our method depends on the moving surface area per frame and achieves here a $\sim3\times$ speedup compared to full per-frame re-evaluation at a temporal error tolerance of $\delta=0.01$.
+			</p>
 			<h2>Abstract</h2>
 			<p align="justify">
 				We exploit the temporal coherence of closed-form animated implicit surfaces by locally re-evaluating an octree-like discretization of the implicit field only as and where is necessary to rigorously maintain a global error invariant over time, thereby saving resources in static or slowly-evolving areas far from the motion where per-frame updates are not necessary. We treat implicit surface rendering as a special case of the continuous constraint satisfaction problem of set inversion, which seeks preimages of arbitrary sets under vector-valued functions. From this perspective, we formalize a temporally-coherent set inversion algorithm that localizes changes in the field by range-bounding its time derivatives using interval arithmetic. We implement our algorithm on the GPU using persistent thread scheduling and apply it to the scalar case of implicit surface and swept volume rendering where we achieve significant speedups in complex scenes with localized deformations like those found in games and modelling applications where interactivity is required and bounded-error approximation is acceptable.

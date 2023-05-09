@@ -65,3 +65,9 @@ i {
 	height: 550px;
 	width: 880px;
 }
+
+img {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	width: 24.6%;
+}
