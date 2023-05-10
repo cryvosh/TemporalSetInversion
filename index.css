@@ -69,5 +69,6 @@ i {
 img {
 	padding-top: 20px;
 	padding-bottom: 10px;
-	width: 24.6%;
+	width: 220px;
+	float: left;
 }

@@ -31,10 +31,12 @@
 				</a>
 			</p>
 			<!-- <i class="fa fa-link" style="font-size:27px;"></i> -->
-			<img src="1.jpg">
-			<img src="2.jpg">
-			<img src="3.jpg">
-			<img src="4.jpg">
+			<div style="width:100%;display:table;;">
+				<img src="1.jpg">
+				<img src="2.jpg">
+				<img src="3.jpg">
+				<img src="4.jpg">
+			</div>
 			<p align="justify">
 				Fig 1. Snapshots of an animated implicit surface at timesteps $68, 150, 265$ and $330$ showing in red the regions that were evaluated in each timestep to sparsely update a $1024^3$ voxelization of the scene only as and where is necessary to maintain bounded error in the surface. For comparison, existing approaches would color the entire surface red in each timestep, thus wasting resources in static or slowly-evolving areas far from the motion. The runtime of our method depends on the moving surface area per frame and achieves here a $\sim3\times$ speedup compared to full per-frame re-evaluation at a temporal error tolerance of $\delta=0.01$.
 			</p>
