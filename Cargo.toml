@@ -1,0 +1,38 @@
+[package]
+name = "TSI"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kavosh Jazar <cryvosh@gmail.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+wgpu = "0.14.0"
+env_logger = "0.9"
+log = "0.4"
+pollster = "0.2.4"
+bytemuck = { version = "1.7.3", features = [ "derive" ] }
+naga = "0.10.0"
+
+regex = "1"
+
+winit = "0.27.5"
+cgmath = "0.18"
+
+serde_json = "1.0"
+bimap = "0.6.2"
+lazy_static = "1.4.0"
+futures = "0.3.21"
+
+futures-intrusive = "^0.4"
+
+[dependencies.image]
+version = "0.24"
+default-features = false
+features = ["png", "jpeg"]
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "unwind"
