@@ -33,6 +33,10 @@ Note that this is all research-quality code. The interesting bits are contained 
 2. To save frames to disk, set `save_frames_to_disk` in `/src/main.rs` to true
 3. To save timing data to disk, set `save_timing_to_disk` in `/src/main.rs` to true
 
+### To switch scenes
+1. Make `file_contents` in `/src/IR.rs` read from `scenes/something_else.ll`
+2. Set `scene` in `/src/compute.wgsl` according to the comment next to it
+
 ### To add a new scene
 1. Create new file `/scenes/example.cpp` and paste in your GLSL code
 2. The field function must be named `f`, mapping 4 floats `x,y,z,t` to a single float
