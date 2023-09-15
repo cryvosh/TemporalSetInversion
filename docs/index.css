@@ -61,6 +61,11 @@ i {
 	text-decoration: none;
 }
 
+#pres_video {
+	height: 495px;
+	width: 880px;
+}
+
 #sup_video {
 	height: 550px;
 	width: 880px;
